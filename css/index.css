@@ -1,0 +1,118 @@
+/* GENERAL STYLE */
+
+
+
+
+.nav > .nav-link{
+  color: black;
+  animation: all 8s;
+}
+
+.nav > .nav-link:hover{
+color: #e0d201;
+
+}
+
+/*SECTIONS*/
+/*NAV*/
+.navbar-brand > img{
+ width: 100px;
+}
+
+.photo-frame {
+  font-size: 20px;
+}
+
+.photo-frame::before, .photo-frame::after{
+  content: "";
+  display: block;
+  width: var(--box-size);
+  height: var(--box-size);
+  position: absolute;
+  z-index: -10;
+  animation: turnZ 7s linear alternate-reverse;
+}
+
+.photo-frame::before{
+  --box-size: 3em;
+  background-image: radial-gradient( blue 50%, yellow 50%);
+  top: calc(99% - ( var(--box-size) /2 ) );
+  right:calc(99% - (var(--box-size) /2 ) );
+}
+
+
+.photo-frame::after{
+  z-index: 1;
+  --box-size: 4em;
+  background-image: radial-gradient( yellow 45%, blue 55%);
+  bottom: calc(98% -(var(--box-size) /3));
+  left: calc(98% -(var(--box-size) /3));
+
+}
+
+
+
+@keyframes turnZ {
+  to{
+    transform: rotate(3turn);
+  }
+}
+
+.contenedor{
+display: flex;
+align-items: center;
+align-content: center;
+padding-left: 50px;
+padding-right: 50px;
+}
+
+.icon-service {
+  --box-size: 70px;
+  width: var(--box-size);
+  height: var(--box-size);
+  padding: 10px;
+}
+
+
+.logoNavbar{
+
+
+color: blue;
+font-size: 25px ;
+font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+
+@media  (max-width: 500px) {
+
+  .display-2{
+
+display: none;
+    
+  }
+
+
+
+
+  .logoNavbar{
+
+
+    color: blue;
+    font-size: 20px ;
+    margin-left: 20px;
+    
+    }
+
+    .photo-frame::after{
+      z-index: 1;
+      --box-size: 3em;
+      background-image: radial-gradient( yellow 45%, blue 55%);
+      bottom: calc(98% -(var(--box-size) /3));
+      left: calc(98% -(var(--box-size) /3));
+    
+    }
+
+  
+}

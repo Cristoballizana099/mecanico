@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/login.css">
+        <title>Login</title>
+    </head>
+    <body>
+
+        <div class="login-box">
+            <h2>Login</h2>
+            <form>
+              <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Rut</label>
+              </div>
+              <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Contraseña</label>
+              </div>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Ingresar
+              </a>
+            </form>
+          </div>
+   
+    </body>
+</html>
+
+    <!--Bibliotecas JS-->
+        <script src="js/index.js"></script>
+
+        <script>
+            function loadSession(){
+    
+            var usuario = document.getElementById("usuario").value;
+            var contraseña = document.getElementById("contraseña").value;
+            
+            if(usuario == "isidora" && contraseña=="123"){
+                    
+                    window.location ="home.html";
+
+            }else{
+
+            document.getElementById("info").innerHTML = "Error, porfavor vuelve a intentar"
+
+            }
+        }
+        </script>
