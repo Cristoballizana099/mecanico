@@ -8,9 +8,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+
+
+
 
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -54,6 +57,7 @@ main {
 
 .container {
   max-width: 400px;
+  max-height: 100%;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -67,7 +71,7 @@ main {
   font: 4000 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
 
-#contact {
+#contact,#contacts {
   right: 10px;
   top:10px;
   background: #FFFFFF;
@@ -85,7 +89,7 @@ main {
   color: #1C1C1C;
 }
 
-#contact h4 {
+#contact  h4 {
   margin: 0px 0 15px;
   display: block;
   font-size: 13px;
@@ -101,7 +105,7 @@ fieldset {
   width: 100%;
 }
 
-#contact input[type="text"] {
+#contact,#contacts, input[type="text"] {
   width: 100%;
   border: 1px solid #ccc;
   background: #FFF;
@@ -112,7 +116,7 @@ fieldset {
   background-color: #ffffff;
 }
 
-#contact input[type="text"]:hover{
+#contact   input[type="text"]:hover{
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.1s ease-in-out;
   transition: border-color 0.1s ease-in-out;
@@ -131,6 +135,8 @@ fieldset {
   font-size: 15px;
   font-weight: 600;
 }
+
+
 
 #contact button[type="submit"]:hover {
   background: #066da4;
@@ -167,4 +173,51 @@ fieldset {
 
 :-ms-input-placeholder {
   color: #888;
+}
+
+
+
+
+#contacts {
+margin: auto;
+width: 70%;
+}
+
+
+
+.modall{
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+background-color: #111111bd;
+display: flex;
+pointer-events: none;
+transition: opacity .6s;
+opacity: 0;
+}
+
+
+.modalActive{
+
+  pointer-events: unset;
+  opacity: 1;
+  transition: opacity .6s;
+  z-index: 1040;
+ 
+}
+
+
+.error{
+
+  color: red;
+}
+
+
+
+.contact{
+
+
+  margin-top: 50px;
 }

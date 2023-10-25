@@ -2,10 +2,16 @@
 
 
 
+.container{
+
+  max-height: 100%;
+}
+
 
 .nav > .nav-link{
   color: black;
   animation: all 8s;
+ 
 }
 
 .nav > .nav-link:hover{

@@ -7,6 +7,12 @@ html {
     font-family: sans-serif;
     background-color: #fff;
   }
+
+  
+.container{
+
+  max-height: 100%;
+}
   
   .login-box {
     position: absolute;

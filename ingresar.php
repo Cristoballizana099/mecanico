@@ -8,13 +8,13 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/cartas.css">
+        <link rel="stylesheet" href="css/formulario.css">
         <link rel="stylesheet" href="css/footer.css">
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
         <!-- CSS bootstrap v5-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <title>Home</title>
+        <title>Ingresar</title>
     </head>  
     <body class="bg-light">
       <!-- NAVBAR-->
@@ -28,8 +28,8 @@
       <!--Items-->
      
       <div class="nav ms-auto">
-        <a href="#sechome" class="nav-link"> Home</a>   
-        <a href="#secServicios" class="nav-link"> Servicios</a>
+        <a href="index.php" class="nav-link"> Home</a>   
+        <a href="index.php" class="nav-link"> Servicios</a>
         <a href="#secContacto" class="nav-link">Contacto</a>
 
 
@@ -38,59 +38,68 @@
       </nav>  
 
       <div class="container"  id="sechome">
-        <!--HEADER-->
+        
         <br><br><br><br>
         <header class="row contenedor " >
-            <div class=" col-12 col-md-9 ">
-              <h1 class="display-2 ">
-                <span class="d-block">Bienvenido!</span>
-                a MecTech Santiago
-              </h1>
-            </div>
-            <div class="col-12 col-md-3">
-              <div class="photo-frame position-relative shadow" >
-                  <img src="img/home.jfif" alt="Gina Adams" class="w-100">
-              </div>    
-            </div>
+           
         </header>
         <br><br><br><br>
-        <!--SERVICIOS-->
+       
         <section class="row justify-content-around text-center" id="secServicios">
-          <!--TITULO-->
+         
             <h2 class="col-12 display-4 text-capitalize mb-3"> 
-              Que necesitas?
+             Formulario Ingresar Vehículo
             </h2>
 
-          <!--CARTAS-->
-          <div class="container">
-            <div class="flex">
-              <div class="card" id="carta1"> 
-                <img class="CartasImg" src="img/ingresar.jfif" alt="">
-                <div class="card-body">
-                  <h3>Ingresar</h3>
-                  <p>Solo personal autorizado puede hacer ingreso de información sobre reparación.
-                  </p>
-                </div>
+          
+
+            <div class="container"> 
+                <form id="contact"  method="post">
+                  <h3>Ingresar Vehículo</h3>
+                  <h4>Ingrese los datos solicitados:</h4>
+                  <fieldset>
+                    <input placeholder="patente XXLL22" name="idpatentes" type="text" tabindex="6" required maxlength="6" minlength="6" autofocus>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Rut cliente  xx.xxx.xxx-x" name="RutClientes" type="text" tabindex="1" required maxlength="12" minlength="11">
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Nombre y Apellido" name="NombreApellidos" type="text" tabindex="2" required >
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Modelo de auto" name="ModeloAutos" type="text" tabindex="3" required>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Color del auto" name="ColorAutos" type="text" tabindex="4" required>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Pieza cambiada" name="PiezaCambiadas" type="text" tabindex="7" required>
+                  </fieldset>
+
+                  <fieldset>
+                    <input placeholder="Descripción de reparación" name="Descripcions" type="text" tabindex="8" required>
+                  </fieldset>
+
+                  <fieldset>
+                    <input placeholder="Total x.xxx.xxx" type="text"  name="totals" tabindex="9" required>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <button name="register" type="submit"  id="contact-submit" data-submit="...Sending">Ingresar</button>
+                  </fieldset>
+                </form>
+                
+
+              <?php include("registrar.php") ?>
+                   
+
+
               </div>
-              <div class="card" id="carta2">
-                <img class="CartasImg" src="img/eliminar.jfif" alt="">
-                <div class="card-body">
-                  <h3>Eliminar</h3>
-                  <p>Solo personal autorizado puede hacer eliminacion de información sobre reparación.
-                  </p>
-                </div>
-              </div>
-              <div class="card" id=carta3>
-                <img class="CartasImg" src="img/mostrar.jfif" alt="">
-                <div class="card-body">
-                  <h3>Información</h3>
-                  <p>Ingresa aquí para saber la información sobre la reparación de tu auto.
-                  </p>
-                </div>
-              </div>
-             
-            </div>
-          </div>
+
+        
+
+            
+          
 
         </section> 
 
@@ -120,18 +129,15 @@
   </footer>
       </div>
 
-    
-
-     
-
       <!-- JS bootstrap-->
       <script> </script>
 
       <!--JS main-->
       <script src="./js/index.js"></script>
 
-      
-      
+     
+    
+
       
         
       </body>

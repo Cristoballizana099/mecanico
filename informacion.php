@@ -8,17 +8,17 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/formulario.css">
+        <link rel="stylesheet" href="css/formulario_informacion.css ">
         <link rel="stylesheet" href="css/footer.css">
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
         <!-- CSS bootstrap v5-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <title>Eliminar</title>
+        <title>Información</title>
     </head>  
     <body class="bg-light">
       <!-- NAVBAR-->
-      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light container navbar-main">
+      <nav class="navbar navbar-expand-md navbar-light  bg-light container navbar-main">
       <!--Branding-->
       <div class="navbar-brand">
         <span class="logoNavbar">Mectech</span>
@@ -28,8 +28,8 @@
       <!--Items-->
      
       <div class="nav ms-auto">
-        <a href="index.html" class="nav-link"> Home</a>   
-        <a href="index.html" class="nav-link"> Servicios</a>
+        <a href="index.php" class="nav-link"> Home</a>   
+        <a href="index.php" class="nav-link"> Servicios</a>
         <a href="#secContacto" class="nav-link">Contacto</a>
 
 
@@ -48,27 +48,30 @@
         <section class="row justify-content-around text-center" id="secServicios">
           <!--TITULO-->
             <h2 class="col-12 display-4 text-capitalize mb-3"> 
-              Formulario Eliminar Vehículo
+                Información Del Vehículo
             </h2>
           
             <!--FORMULARIO-->
 
-            <div class="container"> 
-                <form id="contact" action="" method="post">
-                  <h3>Eliminar Vehículo</h3>
-                  <h4>Ingrese los datos solicitados:</h4>
+            <div class="container" style="margin-top: 120px;"> 
+                
+                    
+                <form id="contact"  method="POST">
+                  <h3>Ingrese Datos</h3>
                   <fieldset>
-                    <input placeholder="Rut" type="text" tabindex="1" required autofocus>
+                    <input placeholder="Patente" name="idpatente" type="text" tabindex="2" required maxlength="6" minlength="6">
                   </fieldset>
                   <fieldset>
-                    <input placeholder="Patente" type="text" tabindex="2" required>
-                  </fieldset>
-                  <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Eliminar</button>
+                    <button name="submit" type="submit" id="contact-submit">Visualizar</button>
                   </fieldset>
                 </form>
+<br><br>
+                <?php include("mostrar.php") ?>
+                
               </div>
 
+             
+            
             <!--FORMULARIO-->
           
 
@@ -77,28 +80,28 @@
         <br><br><br><br><br><br>
 
         <!--FOOTER-->
-<footer>
-  <div class="top_header" id="secContacto">
-  <section>
-  <span><i class="fa fa-map-marker"></i></span>
-  <span>Garcia lorca 3120, Maipú</span>
-  </section>
-  <section>
-  <span><i class="fa fa-phone"></i></span>
-  <span>(+56) 950509611</span>
-  </section>
-  <section>
-  <span><i class="fa fa-envelope"></i></span>
-  <span>mectech@gmail.com</span>
-  </section>
-  </div>
-  <span class="border-shape"></span>
+          <footer>
+            <div class="top_header" id="secContacto">
+            <section>
+            <span><i class="fa fa-map-marker"></i></span>
+            <span>Garcia lorca 3120, Maipú</span>
+            </section>
+            <section>
+            <span><i class="fa fa-phone"></i></span>
+            <span>(+56) 950509611</span>
+            </section>
+            <section>
+            <span><i class="fa fa-envelope"></i></span>
+            <span>mectech@gmail.com</span>
+            </section>
+            </div>
+            <span class="border-shape"></span>
 
-  <div class="copyright">
-  Copyright © 2023 MecTech.cl - All rights reserved 
-  </div>
-  </footer>
-      </div>
+            <div class="copyright">
+            Copyright © 2023 MecTech.cl - All rights reserved 
+            </div>
+            </footer>
+    </div>
 
     
 
@@ -108,7 +111,7 @@
       <script> </script>
 
       <!--JS main-->
-      <script src="./js/index.js"></script>
+      
 
       
       
